@@ -1,37 +1,60 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8"> 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-  <title>Mi Landing Page</title> 
-  <style>
-    body {
-      font-family: sans-serif; 
-      text-align: center;     
-      padding: 2rem;         
-    }
-    
-    h1 {
-      color: #333;
-    }
-    
-    a {
-      color: #0366d6;
-      text-decoration: none;
-    }
-  </style>
+  <meta charset="UTF-8"> <!-- Codificación de caracteres -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive en móviles -->
+  <title>Mi Landing Page</title>
+  <!-- Tailwind CSS vía CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="bg-gray-100 font-sans text-center p-8">
+  <!-- --- Header --- -->
+  <section class="bg-white p-6 rounded-lg shadow-md max-w-md mx-auto my-4">
+    <h1 class="text-3xl font-bold text-gray-800 mb-2">¡Hola! Soy Diego</h1> <!-- Título principal -->
+    <p class="text-gray-600 mb-4">Desarrollador web | Apasionado de Angular</p> <!-- Descripción -->
+    <p>
+      <a href="https://linkedin.com/in/Diego27bs" target="_blank" class="text-blue-600 hover:underline">
+        Conecta conmigo en LinkedIn
+      </a>
+    </p> <!-- Enlace a LinkedIn -->
+  </section>
 
-  <h1>¡Hola! Soy Diego</h1>
-  
-  <p>Desarrollador web</p>
-  
-  <!-- Enlace a perfil de LinkedIn -->
-  <p>
-    <a href="https://linkedin.com/in/Diego27bs" target="_blank">
-      Conecta conmigo en LinkedIn
-    </a>
-  </p>
+  <!-- --- Sobre mí --- -->
+  <section class="bg-white p-6 rounded-lg shadow-md max-w-md mx-auto my-4">
+    <h2 class="text-2xl font-semibold text-gray-800 mb-2">Sobre mí</h2> <!-- Subtítulo -->
+    <p class="text-gray-600">Con experiencia tanto en front-end como en back-end.</p>
+  </section>
+
+  <!-- --- Habilidades --- -->
+  <section class="bg-white p-6 rounded-lg shadow-md max-w-md mx-auto my-4">
+    <h2 class="text-2xl font-semibold text-gray-800 mb-2">Habilidades</h2>
+    <ul class="list-disc list-inside text-gray-600 text-left">
+      <li>Java & CSS</li> <!-- Habilidad 1 -->
+      <li>HTML/HTML5 & React</li> <!-- Habilidad 2 -->
+      <li>Git & GitHub</li> <!-- Habilidad 3 -->
+      <li>JavaScript</li> <!-- Habilidad 4 -->
+    </ul>
+  </section>
+
+  <!-- --- Proyectos --- -->
+  <section class="bg-white p-6 rounded-lg shadow-md max-w-md mx-auto my-4">
+    <h2 class="text-2xl font-semibold text-gray-800 mb-2">Proyectos destacados</h2>
+    <ul class="list-disc list-inside text-gray-600 text-left">
+      <li><a href="https://..." target="_blank" class="text-blue-600 hover:underline">Medac App</a></li> <!-- Proyecto 1 -->
+    </ul>
+  </section>
+
+  <!-- --- Contacto --- -->
+  <section class="bg-white p-6 rounded-lg shadow-md max-w-md mx-auto my-4">
+    <h2 class="text-2xl font-semibold text-gray-800 mb-2">Contacto</h2>
+    <p class="text-gray-600">
+      <a href="mailto:diegob.dbs@gmail.com" class="hover:underline">diegob.dbs@gmail.com</a> • 
+      <a href="https://linkedin.com/in/Diego27bs" target="_blank" class="text-blue-600 hover:underline">LinkedIn</a>
+    </p>
+  </section>
+
+  <!-- --- Footer --- -->
+  <footer class="text-gray-500 text-sm mt-8">&copy; 2025 Diego27bs. Todos los derechos reservados.</footer>
 </body>
 </html>
+
