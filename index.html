@@ -1,60 +1,91 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8"> <!-- Codificación de caracteres -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive en móviles -->
+  <meta charset="UTF-8"> <!-- Codificación de caracteres UTF-8 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Hace la página responsive -->
   <title>Mi Landing Page</title>
-  <!-- Tailwind CSS vía CDN -->
+
+  <!-- Carga Tailwind CSS via CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-100 font-sans text-center p-8">
-  <!-- --- Header --- -->
-  <section class="bg-white p-6 rounded-lg shadow-md max-w-md mx-auto my-4">
-    <h1 class="text-3xl font-bold text-gray-800 mb-2">¡Hola! Soy Diego</h1> <!-- Título principal -->
-    <p class="text-gray-600 mb-4">Desarrollador web</p> <!-- Descripción -->
-    <p>
-      <a href="https://linkedin.com/in/Diego27bs" target="_blank" class="text-blue-600 hover:underline">
-        Conecta conmigo en LinkedIn
-      </a>
-    </p> <!-- Enlace a LinkedIn -->
-  </section>
+  <!-- bg-gray-100: fondo gris claro; font-sans: tipografía sin serifas; text-center: centra todo el texto; p-8: padding de 2rem -->
 
-  <!-- --- Sobre mí --- -->
-  <section class="bg-white p-6 rounded-lg shadow-md max-w-md mx-auto my-4">
-    <h2 class="text-2xl font-semibold text-gray-800 mb-2">Sobre mí</h2> <!-- Subtítulo -->
-    <p class="text-gray-600">Con experiencia tanto en front-end como en back-end.</p>
-  </section>
+  <!-- --- Header visual con degradado y sombra --- -->
+  <header class="bg-gradient-to-r from-blue-500 to-indigo-600 text-white p-8 rounded-lg shadow-lg max-w-md mx-auto my-6">
+    <!-- bg-gradient-to-r: degradado horizontal; from-blue-500: inicio azul; to-indigo-600: fin índigo; text-white: texto blanco; p-8: padding; rounded-lg: bordes redondeados; shadow-lg: sombra pronunciada; max-w-md: ancho máximo medio; mx-auto: centra horizontalmente; my-6: margen vertical -->
+    <h1 class="text-4xl font-bold mb-2">
+      ¡Hola! Soy Diego
+    </h1> <!-- text-4xl: tamaño de texto muy grande; font-bold: negrita; mb-2: margen inferior de 0.5rem -->
+    <p class="text-lg">
+      Desarrollador web
+    </p> <!-- text-lg: tamaño de texto grande -->
+  </header>
 
-  <!-- --- Habilidades --- -->
-  <section class="bg-white p-6 rounded-lg shadow-md max-w-md mx-auto my-4">
-    <h2 class="text-2xl font-semibold text-gray-800 mb-2">Habilidades</h2>
-    <ul class="list-disc list-inside text-gray-600 text-left">
-      <li>Java & CSS</li> <!-- Habilidad 1 -->
-      <li>HTML/HTML5 & React</li> <!-- Habilidad 2 -->
-      <li>Git & GitHub</li> <!-- Habilidad 3 -->
-      <li>JavaScript</li> <!-- Habilidad 4 -->
+  <!-- --- Habilidades en tarjeta blanca con espacio --- -->
+  <section class="bg-white p-6 rounded-lg shadow-md max-w-md mx-auto my-6">
+    <!-- bg-white: fondo blanco; p-6: padding de 1.5rem; rounded-lg: bordes redondeados; shadow-md: sombra media; max-w-md: ancho máximo medio; mx-auto: centra horizontal; my-6: margen vertical -->
+    <h2 class="text-2xl font-semibold text-gray-800 mb-4">
+      Habilidades
+    </h2> <!-- text-2xl: texto grande; font-semibold: seminegrita; text-gray-800: texto gris oscuro; mb-4: margen inferior de 1rem -->
+    <ul class="list-disc list-inside text-gray-600 space-y-2 text-left">
+      <!-- list-disc: viñetas circulares; list-inside: viñetas dentro del contenedor; text-gray-600: texto gris medio; space-y-2: espacio vertical entre ítems; text-left: alineación izquierda -->
+      <li>Java & CSS</li>
+      <li>HTML5 & React</li>
+      <li>Git & GitHub</li>
+      <li>JavaScript</li>
     </ul>
   </section>
 
-  <!-- --- Proyectos --- -->
-  <section class="bg-white p-6 rounded-lg shadow-md max-w-md mx-auto my-4">
-    <h2 class="text-2xl font-semibold text-gray-800 mb-2">Proyectos destacados</h2>
-    <ul class="list-disc list-inside text-gray-600 text-left">
-      <li><a href="https://..." target="_blank" class="text-blue-600 hover:underline">Medac App</a></li> <!-- Proyecto 1 -->
-    </ul>
-  </section>
+  <!-- --- Layout de Proyectos y Sobre mí (Grid) --- -->
+  <div class="max-w-2xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
+    <!-- max-w-2xl: ancho máximo grande; mx-auto: centra horizontalmente; grid: usa CSS Grid; grid-cols-1: 1 columna por defecto; md:grid-cols-2: 2 columnas en pantallas medianas o mayores; gap-6: espacio entre filas y columnas; my-6: margen vertical -->
+    <section class="bg-white p-6 rounded-lg shadow-md">
+      <!-- bg-white: fondo blanco; p-6: padding; rounded-lg: bordes redondeados; shadow-md: sombra media -->
+      <h2 class="text-2xl font-semibold text-gray-800 mb-4">
+        Proyectos destacados
+      </h2> <!-- text-2xl: texto grande; font-semibold: seminegrita; text-gray-800: gris oscuro; mb-4: margen inferior -->
+      <ul class="list-disc list-inside text-gray-600 space-y-2 text-left">
+        <!-- same clases de lista -->
+        <li>
+          <a href="https://github.com/Diego27bs/medac-app" target="_blank" class="text-blue-600 hover:underline">
+            Medac App
+          </a> <!-- text-blue-600: enlace azul; hover:underline: subraya al pasar ratón -->
+        </li>
+      </ul>
+    </section>
+    <section class="bg-white p-6 rounded-lg shadow-md">
+      <!-- misma explicación de clases -->
+      <h2 class="text-2xl font-semibold text-gray-800 mb-4">
+        Sobre mí
+      </h2>
+      <p class="text-gray-600">
+        Con experiencia tanto en front-end como en back-end.
+      </p> <!-- text-gray-600: texto gris medio -->
+    </section>
+  </div>
 
   <!-- --- Contacto --- -->
-  <section class="bg-white p-6 rounded-lg shadow-md max-w-md mx-auto my-4">
-    <h2 class="text-2xl font-semibold text-gray-800 mb-2">Contacto</h2>
+  <section class="bg-white p-6 rounded-lg shadow-md max-w-md mx-auto my-6">
+    <!-- Explicación repetida de clases -->
+    <h2 class="text-2xl font-semibold text-gray-800 mb-4">
+      Contacto
+    </h2>
     <p class="text-gray-600">
-      <a href="mailto:diegob.dbs@gmail.com" class="hover:underline">diegob.dbs@gmail.com</a> • 
-      <a href="https://linkedin.com/in/Diego27bs" target="_blank" class="text-blue-600 hover:underline">LinkedIn</a>
+      <a href="mailto:diegob.dbs@gmail.com" class="hover:underline">
+        diegob.dbs@gmail.com
+      </a> <!-- hover:underline: subraya al pasar ratón -->
+      <span class="mx-2">•</span> <!-- mx-2: margen horizontal -->
+      <a href="https://www.linkedin.com/in/dbs27272727/" target="_blank" class="text-blue-600 hover:underline">
+        LinkedIn
+      </a> <!-- text-blue-600: color azul; hover:underline: subrayado al hover -->
     </p>
   </section>
 
   <!-- --- Footer --- -->
-  <footer class="text-gray-500 text-sm mt-8">&copy; 2025 Diego27bs. Todos los derechos reservados.</footer>
+  <footer class="text-gray-500 text-sm mt-8">
+    <!-- text-gray-500: gris claro; text-sm: texto pequeño; mt-8: margen superior de 2rem -->
+    &copy; 2025 Diego27bs. Todos los derechos reservados.
+  </footer>
 </body>
 </html>
-
