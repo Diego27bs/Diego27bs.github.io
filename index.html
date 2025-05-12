@@ -2,102 +2,128 @@
 <html lang="es">
 
 <head>
-  <meta charset="UTF-8"> <!-- Codificación de caracteres UTF-8 -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Hace la página responsive -->
-  <title>Mi Landing Page</title>
+  <!-- Metadatos básicos y configuración responsive -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landing Web Junior</title>
 
-  <!-- Carga Tailwind CSS via CDN -->
+  <!-- Font Awesome: íconos de habilidades y redes sociales -->
+  <script src="https://kit.fontawesome.com/TU_KIT_ID.js" crossorigin="anonymous"></script>
+  <!-- Tailwind CSS: framework de utilidades para estilos rápidos -->
   <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Scroll suave para navegaciones con anclaje -->
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
 </head>
 
 <body class="bg-gray-100 font-sans text-center p-8">
+  <!-- Navbar fija -->
+  <nav class="fixed top-0 left-0 w-full bg-white bg-opacity-80 backdrop-blur shadow z-20">
+    <ul class="max-w-2xl mx-auto flex justify-between py-3 px-4">
+      <li><a href="#inicio" class="text-gray-800 hover:text-blue-600">Inicio</a></li>
+      <li><a href="#habilidades" class="text-gray-800 hover:text-blue-600">Habilidades</a></li>
+      <li><a href="#proyectos" class="text-gray-800 hover:text-blue-600">Proyectos</a></li>
+      <li><a href="#sobre-mi" class="text-gray-800 hover:text-blue-600">Sobre mí</a></li>
+      <li><a href="#contacto" class="text-gray-800 hover:text-blue-600">Contacto</a></li>
+    </ul>
+  </nav>
 
-
-
-
-  <!-- --- Header visual con degradado y sombra --- -->
-  <header
-    class="bg-gradient-to-r from-blue-500 to-indigo-600 text-white p-8 rounded-lg shadow-lg max-w-md mx-auto my-6">
-    <!-- bg-gradient-to-r: degradado horizontal; from-blue-500: inicio azul; to-indigo-600: fin índigo; text-white: texto blanco; p-8: padding; rounded-lg: bordes redondeados; shadow-lg: sombra pronunciada; max-w-md: ancho máximo medio; mx-auto: centra horizontalmente; my-6: margen vertical -->
-    <h1 class="text-4xl font-bold mb-2">
-      ¡Hola! Soy Diego
-    </h1> <!-- text-4xl: tamaño de texto muy grande; font-bold: negrita; mb-2: margen inferior de 0.5rem -->
-    <p class="text-lg">
-      Desarrollador web
-    </p> <!-- text-lg: tamaño de texto grande -->
+  <!-- Hero full-screen con fondo no repetido y centrado -->
+  <header id="inicio"
+    class="scroll-mt-16 min-h-screen flex flex-col justify-center items-center bg-gradient-to-br from-white-500 to-indigo-600 text-white p-8"
+    style="background-image: url('fondo-escritorio.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center;">
+    <img src="fotoDiego.jpg" alt="Foto de Diego"
+      class="w-40 h-40 rounded-full mx-auto mb-5 shadow-md" />
+    <h1 class="text-4xl font-bold mb-2">¡Hola! Soy Diego</h1>
+    <p class="text-lg mb-4 max-w-xl mx-auto">
+      Desarrollador web junior especializado en front-end, también con conocimientos en back-end
+    </p>
   </header>
 
-  <!-- --- Habilidades en tarjeta blanca con espacio --- -->
-  <section class="bg-white p-6 rounded-lg shadow-md max-w-md mx-auto my-6">
-    <!-- bg-white: fondo blanco; p-6: padding de 1.5rem; rounded-lg: bordes redondeados; shadow-md: sombra media; max-w-md: ancho máximo medio; mx-auto: centra horizontal; my-6: margen vertical -->
-    <h2 class="text-2xl font-semibold text-gray-800 mb-4">
-      Habilidades
-    </h2>
-    <!-- text-2xl: texto grande; font-semibold: seminegrita; text-gray-800: texto gris oscuro; mb-4: margen inferior de 1rem -->
-    <ul class="list-disc list-inside text-gray-600 space-y-2 text-left">
-      <!-- list-disc: viñetas circulares; list-inside: viñetas dentro del contenedor; text-gray-600: texto gris medio; space-y-2: espacio vertical entre ítems; text-left: alineación izquierda -->
-      <li>Java & CSS</li>
-      <li>HTML5 & React</li>
-      <li>Git & GitHub</li>
-      <li>JavaScript</li>
+  <!-- Habilidades con fondo amarillo claro -->
+  <section id="habilidades" class="scroll-mt-16 bg-yellow-100 p-6 rounded-lg shadow-md max-w-2xl mx-auto my-6">
+    <h2 class="text-2xl font-semibold text-gray-800 mb-4">Habilidades</h2>
+    <ul class="grid grid-cols-3 gap-4 text-gray-600">
+      <li class="flex flex-col items-center">
+        <i class="fab fa-html5 text-3xl mb-1"></i>
+        <span>HTML5</span>
+      </li>
+      <li class="flex flex-col items-center">
+        <i class="fab fa-css3-alt text-3xl mb-1"></i>
+        <span>CSS</span>
+      </li>
+      <li class="flex flex-col items-center">
+        <i class="fab fa-js-square text-3xl mb-1"></i>
+        <span>JavaScript</span>
+      </li>
+      <li class="flex flex-col items-center">
+        <i class="fab fa-react text-3xl mb-1"></i>
+        <span>React</span>
+      </li>
+      <li class="flex flex-col items-center">
+        <i class="fab fa-git-alt text-3xl mb-1"></i>
+        <span>Git</span>
+      </li>
+      <li class="flex flex-col items-center">
+        <i class="fab fa-github text-3xl mb-1"></i>
+        <span>GitHub</span>
+      </li>
     </ul>
   </section>
 
-  <!-- --- Layout de Proyectos y Sobre mí (Grid) --- -->
-  <div class="max-w-2xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
-    <!-- max-w-2xl: ancho máximo grande; mx-auto: centra horizontalmente; grid: usa CSS Grid; grid-cols-1: 1 columna por defecto; md:grid-cols-2: 2 columnas en pantallas medianas o mayores; gap-6: espacio entre filas y columnas; my-6: margen vertical -->
-    <section class="bg-white p-6 rounded-lg shadow-md">
-      <!-- bg-white: fondo blanco; p-6: padding; rounded-lg: bordes redondeados; shadow-md: sombra media -->
-      <h2 class="text-2xl font-semibold text-gray-800 mb-4">
-        Proyectos destacados
-      </h2>
-      <!-- text-2xl: texto grande; font-semibold: seminegrita; text-gray-800: gris oscuro; mb-4: margen inferior -->
-      <ul class="list-disc list-inside text-gray-600 space-y-2 text-left">
-        <!-- same clases de lista -->
-        <li>
-          <a href="https://github.com/Diego27bs/medac-app" target="_blank" class="text-blue-600 hover:underline">
-
-          </a> <!-- text-blue-600: enlace azul; hover:underline: subraya al pasar ratón -->
-        </li>
-      </ul>
-    </section>
-    <section class="bg-white p-6 rounded-lg shadow-md">
-      <!-- misma explicación de clases -->
-      <h2 class="text-2xl font-semibold text-gray-800 mb-4">
-        Sobre mí
-      </h2>
-      <p class="text-gray-600">
-        Con experiencia tanto en front-end como en back-end.
-      </p> <!-- text-gray-600: texto gris medio -->
-    </section>
-  </div>
-
-  <!-- --- Contacto --- -->
-  <section class="bg-white p-6 rounded-lg shadow-md max-w-md mx-auto my-6">
-    <!-- Explicación repetida de clases -->
-    <h2 class="text-2xl font-semibold text-gray-800 mb-4">
-      Contacto
-    </h2>
-    <p class="text-gray-600">
-
-      <a href="mailto:diegob.dbs@gmail.com" class="hover:underline">
-        diegob.dbs@gmail.com
-      </a> <!-- hover:underline: subraya al pasar ratón -->
-      <span class="mx-2">•</span> <!-- mx-2: margen horizontal -->
-      <a href="https://www.linkedin.com/in/dbs27272727/" target="_blank" class="text-blue-600 hover:underline">
-        LinkedIn
-      </a> <!-- text-blue-600: color azul; hover:underline: subrayado al hover -->
-
-    </p>
+  <!-- Proyectos con fondo rojo claro -->
+  <section id="proyectos" class="scroll-mt-16 bg-red-100 p-6 rounded-lg shadow-md max-w-2xl mx-auto my-6">
+    <h2 class="text-2xl font-semibold text-gray-800 mb-4">Proyectos Destacados</h2>
+    <div class="space-y-4">
+      <div class="border border-gray-200 rounded-lg p-4 hover:shadow-lg transition">
+        <h3 class="text-xl font-semibold">Medac App proyecto profesional</h3>
+        <p class="text-gray-600 text-sm mb-2">Gestor de tareas basado en Jira para una empresa privada</p>
+        <a href="https://github.com/Diego27bs" target="_blank" class="text-blue-600 hover:underline">Ver repositorio</a>
+      </div>
+      <!-- Duplica esta tarjeta para añadir más proyectos -->
+    </div>
   </section>
 
-  <!-- --- Footer --- -->
-  <footer class="text-gray-500 text-sm mt-8">
-    <!-- text-gray-500: gris claro; text-sm: texto pequeño; mt-8: margen superior de 2rem -->
-    &copy; 2025 Diego27bs. Todos los derechos reservados.
+  <!-- Sobre mí con fondo verde suave -->
+  <section id="sobre-mi" class="scroll-mt-16 bg-green-100 p-6 rounded-lg shadow-md max-w-2xl mx-auto my-6">
+    <h2 class="text-2xl font-semibold text-gray-800 mb-4">Sobre mí</h2>
+    <p class="text-gray-600 mb-4">Soy un desarrollador web junior con pasión por crear interfaces limpias y funcionales.</p>
+    <ul class="list-disc list-inside text-gray-600 space-y-1 text-left">
+      <li>📍 Ubicación: Gijón, España</li>
+      <li>🎓 Formación: Grado superior en Desarrollo Web</li>
+      <li>🎯 Busco crecer en equipos dinámicos y proyectos reales</li>
+    </ul>
+  </section>
+
+  <!-- Contacto con fondo azul claro -->
+  <section id="contacto" class="scroll-mt-16 bg-blue-100 p-6 rounded-lg shadow-md max-w-2xl mx-auto my-6">
+    <h2 class="text-2xl font-semibold text-gray-800 mb-4">Contacto</h2>
+    <form action="#" method="POST" class="space-y-4 text-left">
+      <input type="text" name="nombre" placeholder="Tu nombre"
+        class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+      <input type="email" name="email" placeholder="Tu email"
+        class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+      <textarea name="mensaje" rows="4" placeholder="Tu mensaje"
+        class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+      <button type="submit"
+        class="w-full bg-blue-600 text-white font-semibold py-2 rounded hover:bg-blue-700 transition">Enviar mensaje</button>
+      <div class="flex justify-center space-x-6 mt-4">
+        <a href="mailto:diegob.dbs@gmail.com" class="text-gray-600 hover:text-blue-600"><i
+            class="fas fa-envelope text-2xl"></i></a>
+        <a href="https://www.linkedin.com/in/dbs27272727/" target="_blank" class="text-gray-600 hover:text-blue-600"><i
+            class="fab fa-linkedin text-2xl"></i></a>
+      </div>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-gray-500 text-sm mt-8 border-t border-gray-200 pt-4">
+    <p>&copy; 2025 Diego27bs. Todos los derechos reservados.</p>
   </footer>
 </body>
- </html>
- 
 
 </html>
