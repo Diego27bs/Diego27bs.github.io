@@ -36,8 +36,7 @@
   <header id="inicio"
     class="scroll-mt-16 min-h-screen flex flex-col justify-center items-center bg-gradient-to-br from-white-500 to-indigo-600 text-white p-8"
     style="background-image: url('fondo-escritorio.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center;">
-    <img src="fotoDiego.jpg" alt="Foto de Diego"
-      class="w-40 h-40 rounded-full mx-auto mb-5 shadow-md" />
+    <img src="fotoDiego.jpg" alt="Foto de Diego" class="w-40 h-40 rounded-full mx-auto mb-5 shadow-md" />
     <h1 class="text-4xl font-bold mb-2">¡Hola! Soy Diego</h1>
     <p class="text-lg mb-4 max-w-xl mx-auto">
       Desarrollador web junior especializado en front-end, también con conocimientos en back-end
@@ -66,7 +65,7 @@
       </li>
       <li class="flex flex-col items-center">
         <i class="fab fa-git-alt text-3xl mb-1"></i>
-        <span>Git</span>
+        <span>Java</span>
       </li>
       <li class="flex flex-col items-center">
         <i class="fab fa-github text-3xl mb-1"></i>
@@ -91,7 +90,8 @@
   <!-- Sobre mí con fondo verde suave -->
   <section id="sobre-mi" class="scroll-mt-16 bg-green-100 p-6 rounded-lg shadow-md max-w-2xl mx-auto my-6">
     <h2 class="text-2xl font-semibold text-gray-800 mb-4">Sobre mí</h2>
-    <p class="text-gray-600 mb-4">Soy un desarrollador web junior con pasión por crear interfaces limpias y funcionales.</p>
+    <p class="text-gray-600 mb-4">Soy un desarrollador web junior con pasión por crear interfaces limpias y funcionales.
+    </p>
     <ul class="list-disc list-inside text-gray-600 space-y-1 text-left">
       <li>📍 Ubicación: Gijón, España</li>
       <li>🎓 Formación: Grado superior en Desarrollo Web</li>
@@ -100,24 +100,34 @@
   </section>
 
   <!-- Contacto con fondo azul claro -->
-  <section id="contacto" class="scroll-mt-16 bg-blue-100 p-6 rounded-lg shadow-md max-w-2xl mx-auto my-6">
+  <section id="contacto" class="scroll-mt-16 bg-white p-6 rounded-lg shadow-md max-w-2xl mx-auto my-6">
     <h2 class="text-2xl font-semibold text-gray-800 mb-4">Contacto</h2>
-    <form action="#" method="POST" class="space-y-4 text-left">
-      <input type="text" name="nombre" placeholder="Tu nombre"
-        class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" />
-      <input type="email" name="email" placeholder="Tu email"
-        class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" />
-      <textarea name="mensaje" rows="4" placeholder="Tu mensaje"
-        class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
-      <button type="submit"
-        class="w-full bg-blue-600 text-white font-semibold py-2 rounded hover:bg-blue-700 transition">Enviar mensaje</button>
-      <div class="flex justify-center space-x-6 mt-4">
-        <a href="mailto:diegob.dbs@gmail.com" class="text-gray-600 hover:text-blue-600"><i
-            class="fas fa-envelope text-2xl"></i></a>
-        <a href="https://www.linkedin.com/in/dbs27272727/" target="_blank" class="text-gray-600 hover:text-blue-600"><i
-            class="fab fa-linkedin text-2xl"></i></a>
-      </div>
-    </form>
+    <div class="flex justify-center space-x-4 mt-6">
+      <a href="https://www.linkedin.com/in/dbs27272727/" target="_blank"
+        style="background-color:white; background-image: url('linkedin-logo.png'); background-position: center; background-size: 100%; background-repeat: no-repeat;"
+        class="w-16 h-16 rounded-full inline-flex items-center justify-center transition hover:opacity-90"
+        aria-label="LinkedIn">
+      </a>
+      <a href="https://github.com/Diego27bs" target="_blank"
+   style="background-color: white; 
+          background-image: url('logo-github.png'); 
+          background-position: center; 
+          background-size: 90%; 
+          background-repeat: no-repeat;"
+   class="w-16 h-16 rounded-full inline-flex items-center justify-center transition hover:opacity-90"
+   aria-label="GitHub">
+</a>
+<a href="mailto:diegob.dbs@gmail.com"
+   style="background-color: white;
+          background-image: url('gmail-logo.png');
+          background-position: center;
+          background-size: 80%;
+          background-repeat: no-repeat;"
+   class="w-16 h-16 rounded-full inline-flex items-center justify-center transition hover:opacity-90"
+   aria-label="Enviar email">
+</a>
+
+    </div>
   </section>
 
   <!-- Footer -->
